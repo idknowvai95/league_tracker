@@ -1,0 +1,29 @@
+/* 🌟 Import de TailwindCSS */
+@import "tailwindcss";
+
+/* 🧩 Plugin DaisyUI et thème principal */
+@plugin "daisyui"{
+  themes : black; /* ⚫ Thème noir pour DaisyUI */
+};
+
+/* 🔺 Animation ascend : fait défiler un dégradé verticalement */
+@keyframes ascend {
+  0% {
+    background-position: 0% 100%; /* Départ : bas du dégradé */
+  }
+  100% {
+    background-position: 0% 0%;   /* Fin : haut du dégradé */
+  }
+}
+
+/* ✨ Classe utilitaire pour appliquer l'animation ascend */
+.animate-ascend {
+  background-size: 100% 200%;    /* Double taille verticale pour l'effet de défilement */
+  animation: ascend 2s linear infinite; /* Animation continue et linéaire */
+}
+
+/* 🌈 Halo de fond décoratif */
+.halo-ground {
+  background: radial-gradient(circle, rgba(150, 100, 255, 0.15), transparent 70%); /* Halo violet diffus */
+  filter: blur(40px); /* Flou pour un effet lumineux doux */
+}
